@@ -1,0 +1,15 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mensaje Inicial
+        run: echo "Iniciando el workflow de API"
+        
+      - name: Checkout del código
+        uses: actions/checkout@v4
